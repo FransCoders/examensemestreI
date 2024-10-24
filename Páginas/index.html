@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo A</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="../Páginas/index.html">Inicio</a></li>
+            <li><a href="../Páginas/productos.html">Productos</a></li>
+            <li><a href="../Páginas/recetas.html">Recetas</a></li>
+            <li class="logo"><a href="../Páginas/index.html"><img src="../Imagenes/Logo tacama.png" alt="Logo"></a></li>
+            <li><a href="../Páginas/historia.html">Historia</a></li>
+            <li><a href="#">Herencia</a></li>
+            <li><a href="#">Premios</a></li>
+            <li><a href="../Páginas/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+    <div class="container">
+
+        <div class="slide">
+
+            
+            <div class="item" style="background-image: url(../Imagenes/bar.jpg);">
+                <div class="contents">
+                    <div class="name">Tambo de tacama</div>
+                    <div class="des">Ven y conoce nuestra bodega, conoce la elaboracion de vinos y Piscos y nuestras promociones</div>
+                    <button>Ver Mas</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Imagenes/bodega.jpg);">
+                <div class="contents">
+                    <div class="name">Reposo de Vino</div>
+                    <div class="des">Almacenado de la uva en barriles para su fermentación, para su respectivo elaboracion de Vino:</div>
+                    <button>Ver Mas</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Imagenes/proceso.jpg);">
+                <div class="contents">
+                    <div class="name">Proceso de Uva</div>
+                    <div class="des">El proceso de elaboración del vino de uva involucra los siguientes pasos:</div>
+                    <button>Ver Mas</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Imagenes/vinos.jpg);">
+                <div class="contents">
+                    <div class="name">Nuevos Productos</div>
+                    <div class="des">Acontinuacion la bodega tacama realiza la presentacion de nuestros nuevos productos bandera:</div>
+                    <button>Ver Mas</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Imagenes/uvas.jpg);">
+                <div class="contents">
+                    <div class="name">viñedos</div>
+                    <div class="des">La bodega cuenta con 20 hectareas de Uva a continuacion detallamos las distintas variedades de uva.</div>
+                    <button>Ver Mas</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Imagenes/sol.jpg);">
+                <div class="contents">
+                    <div class="name">Sol</div>
+                    <div class="des">Ica, la ciudad conocidad como el "Eterno Sol" les mostramos los diferentes atractivos turisticos.</div>
+                    <button>Ver Mas</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Tacama. Todos los derechos reservados.</p>
+        <ul class="footer-links">
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+    let next = document.querySelector('.next')
+    let prev = document.querySelector('.prev')
+
+    next.addEventListener('click', function(){
+        let items = document.querySelectorAll('.item')
+        document.querySelector('.slide').appendChild(items[0])
+    })
+
+    prev.addEventListener('click', function(){
+        let items = document.querySelectorAll('.item')
+        document.querySelector('.slide').prepend(items[items.length - 1])
+    })
+</script>
+</body>
+</html>

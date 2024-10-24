@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo A</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/productos.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="../Páginas/index.html">Inicio</a></li>
+            <li><a href="../Páginas/productos.html">Productos</a></li>
+            <li><a href="../Páginas/recetas.html">Recetas</a></li>
+            <li class="logo"><a href="../Páginas/index.html"><img src="../Imagenes/Logo tacama.png" alt="Logo"></a></li>
+            <li><a href="../Páginas/historia.html">Historia</a></li>
+            <li><a href="#">Herencia</a></li>
+            <li><a href="#">Premios</a></li>
+            <li><a href="../Páginas/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <aside>
+      
+        <div class="card">
+            <div class="card-title">Productos</div>
+           
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">Vinos</a></li>
+                <li class="list-group-item"><a href="#">Piscos</a></li>
+                <li class="list-group-item"><a href="#">Espumosos</a> </li>
+
+            </ul>
+          
+        </div>
+    </aside>
+    <section>
+        <figure>
+            <img src="../Imagenes/vinos1.png" alt="Don Manuel">
+            <figcaption><a href="#" id="openDialog">Don Manuel</a></figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos2.png" alt="tinto nostrun">
+            <figcaption>Tinto Nostrun</figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos3.png" alt="Semiseco Nostrun">
+            <figcaption>Semiseco Nostrum</figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos4.png" alt="Origen">
+            <figcaption>Origen</figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos5.png" alt="Origen semiseco">
+            <figcaption>Origen semiseco</figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos6.png" alt="Don Manuel añejo">
+            <figcaption>Don manuel Añejo</figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos7.png" alt="Seleccin Especial">
+            <figcaption>Seleccion Especial</figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos8.png" alt="Toñuz">
+            <figcaption>Toñuz</figcaption>
+        </figure>
+        <figure>
+            <img src="../Imagenes/vinos9.png" alt="Seleccion especial">
+            <figcaption>Seleccion especial II</figcaption>
+        </figure>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Tacama. Todos los derechos reservados.</p>
+        <ul class="footer-links">
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </div>
+</footer>
+
+<dialog id="imageDialog">
+    <button id="closeDialog" class="close">&times;</button>
+    <img src="../Imagenes/vinos1.png" style="height: auto; width: auto;">
+</dialog>
+
+<script>
+    const dialog = document.getElementById("imageDialog");
+    const openDialog = document.getElementById("openDialog");
+    const closeDialog = document.getElementById("closeDialog");
+
+    openDialog.addEventListener("click", function(event) {
+        event.preventDefault();
+        dialog.showModal();
+    });
+
+    closeDialog.addEventListener("click", function() {
+        dialog.close();
+    });
+</script>
+</body>
+</html>
